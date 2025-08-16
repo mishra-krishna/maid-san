@@ -22,9 +22,9 @@ Before I can serve you, please ensure you have the following:
 2.  **Ollama:** This is the local LLM server that powers my brain.
     *   **Installation:** Follow the instructions on the [Ollama website](https://ollama.ai/download).
     *   **Running:** Ensure Ollama is running in the background. You can start it with `ollama serve`.
-    *   **Model:** You'll need to pull an LLM model. I am configured to use `phi3:mini` by default, but you can change this in `config.json`. To pull `phi3:mini`, run:
+    *   **Model:** You'll need to pull an LLM model. I am configured to use `llama3.1:8b` by default, but you can change this in `config.json`. To pull `llama3.1:8b`, run:
         ```bash
-        ollama pull phi3:mini
+        ollama pull llama3.1:8b
         ```
 
 ## 🚀 Installation
@@ -60,7 +60,7 @@ I use a `config.json` file to store my settings. A sample `config.json` should b
 
 ```json
 {
-    "ollama_model": "phi3:mini",
+    "ollama_model": "llama3.1:8b",
     "ollama_base_url": "http://localhost:11434",
     "wake_word": "maid",
     "name": "Sakura",
@@ -69,7 +69,7 @@ I use a `config.json` file to store my settings. A sample `config.json` should b
 }
 ```
 
-*   `ollama_model`: The name of the Ollama model you want me to use (e.g., `phi3:mini`, `llama3`, `mistral`).
+*   `ollama_model`: The name of the Ollama model you want me to use (e.g., `llama3.1:8b`, `llama3`, `mistral`).
 *   `ollama_base_url`: The URL where your Ollama server is running.
 *   `wake_word`: The word you need to type to wake me up when I'm sleeping.
 *   `name`: My name! You can change it if you like.
@@ -109,7 +109,7 @@ python main.py
 *   **"LangChain not found!" or "Cannot connect to Ollama!"**:
     *   Ensure you have activated your virtual environment: `source venv/bin/activate` (Linux/macOS) or `.\venv\Scripts\activate` (Windows).
     *   Make sure Ollama is running: `ollama serve`.
-    *   Verify the Ollama model is pulled: `ollama pull phi3:mini` (or your chosen model).
+    *   Verify the Ollama model is pulled: `ollama pull llama3.1:8b` (or your chosen model).
     *   Check `ollama_base_url` in `config.json` is correct.
 *   **"Configuration file not found!"**:
     *   Ensure `config.json` exists in the same directory as `main.py`.
