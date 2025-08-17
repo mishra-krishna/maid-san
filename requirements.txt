@@ -2,3 +2,8 @@ langchain
 langchain-community
 requests
 langchain-ollama
+ddgs
+openai-whisper
+sounddevice
+scipy
+numpy

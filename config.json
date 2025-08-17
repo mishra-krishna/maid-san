@@ -1,7 +1,7 @@
 {
     "wake_word": "maid",
     "name": "Sakura",
-    "ollama_model": "llama3.1:8b",
+    "ollama_model": "granite3.3:2b",
     "show_thinking": false,
     "temperature": 0.7,
     "ollama_base_url": "http://localhost:11434",
